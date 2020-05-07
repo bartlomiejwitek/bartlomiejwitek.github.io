@@ -1,1 +1,0 @@
-# bartlomiejwitek.github.io

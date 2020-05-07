@@ -4,7 +4,7 @@ const CANVAS_WIDTH = 0.45*screen.width;
 const CANVAS_HEIGHT = 0.5*screen.width;
 const PLAYER_WIDTH = 0.066*CANVAS_WIDTH;
 const OBSTACLE_SPEED = 0.005*CANVAS_WIDTH;
-const PLAYER_SPEED = 0.008*CANVAS_WIDTH;
+const PLAYER_SPEED = 0.009*CANVAS_WIDTH;
 const PLAYER_HEIGHT = 0.1*CANVAS_HEIGHT;
 const BACKGROUND_COLOR = 51;
 const gameMode = { 
@@ -176,13 +176,13 @@ function drawSummary(){
 
 function Counter(){
   this.currentTime = new Date().getTime();
-  this.deadline = this.currentTime + 3000;
+  this.deadline = this.currentTime + 30000;
   this.timeLeft;
   this.pauseStart;
 
   this.reset = function(){
     this.currentTime = new Date().getTime();
-    this.deadline = this.currentTime + 3000;
+    this.deadline = this.currentTime + 30000;
   }
   this.update = function() {
     this.timeLeft = this.deadline - new Date().getTime();
@@ -470,8 +470,8 @@ function generateObstacle() {
         let upperTypeBound;
         let lowerTypeBound;
         if(currentMode + 2 > 6){
-          
-          upperTypeBound = (currentMode + 2) - 6;
+            lowerTypeBound = 4;
+            upperTypeBound = 6;
         }else{
           lowerTypeBound = mode;
           upperTypeBound = currentMode + 2;

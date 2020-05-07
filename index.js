@@ -1,7 +1,7 @@
 // const CANVAS_WIDTH = 540;
 // const CANVAS_HEIGHT = 860;
 const CANVAS_WIDTH = 0.45*screen.width;
-const CANVAS_HEIGHT = 0.5*screen.width;
+const CANVAS_HEIGHT = 0.45*screen.width;
 const PLAYER_WIDTH = 0.066*CANVAS_WIDTH;
 const OBSTACLE_SPEED = 0.005*CANVAS_WIDTH;
 const PLAYER_SPEED = 0.009*CANVAS_WIDTH;

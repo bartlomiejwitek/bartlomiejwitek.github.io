@@ -595,6 +595,11 @@ function collisionDetection(){
           points++;
           obstacles[i].alreadyScored = true;
         }
+      }else if(obstacles[i].type != mode){
+        if(obstacles[i].alreadyScored == false){
+          points--;
+          obstacles[i].alreadyScored = true;
+        }
       }
     }
   }
